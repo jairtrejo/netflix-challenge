@@ -1,0 +1,62 @@
+.month-view {
+  a {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+
+    line-height: 1.5em;
+    text-align: center;
+
+    text-decoration: none;
+    color: @eggshell;
+    background-color: @blue;
+    border-radius: 50%;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5em 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 1em;
+  }
+
+  &__calendar {
+    background: @eggshell;
+  }
+
+  &__weekdays {
+    display: none;
+  }
+}
+
+@media (min-width: @phone-width) {
+  .month-view {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &__header {
+      justify-content: center;
+    }
+
+    &__calendar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__weekdays {
+      display: flex;
+    }
+
+    &__weekday {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.day-view{
+  display: none;
+  margin: 1em 0;
+
+  &--in-month {
+    display: flex;
+    align-items: start;
+
+    background: @eggshell;
+    color: @black;
+  }
+
+  &--empty {
+    display: none;
+  }
+
+  &__number {
+    font-size: 3em;
+    color: @purple;
+  }
+
+  &__events {
+    list-style: none;
+    margin: 1em 0 0 1em;
+  }
+}
+
+@media (min-width: @phone-width) {
+  .day-view {
+    display: block;
+    flex: 1;
+    flex-direction: column;
+    font-size: 0.8em;
+
+    overflow-y: auto;
+
+    background: transparent;
+    visibility: hidden;
+
+    &--in-month {
+      visibility: visible;
+    }
+
+    &__number {
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    &__events {
+      margin: 1em 0;
+
+      li {
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0.5em;
+      }
+    }
+
+    &:hover li {
+      white-space: normal;
+    }
+  }
+}

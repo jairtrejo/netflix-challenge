@@ -1,0 +1,26 @@
+body {
+  font-family: 'Avenir Next', 'Helvetica', 'Arial', Sans-serif;
+  font-size: 16px;
+  background: @eggshell;
+  color: #333;
+}
+
+.app {
+  margin: 0.5em 0.5em;
+}
+
+.three-bounce.spinner > div {
+  background-color: @red;
+}
+
+@media (min-width: @phone-width) {
+  .app {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}

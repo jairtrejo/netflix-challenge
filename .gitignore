@@ -1,0 +1,5 @@
+.tern-port
+dist/*
+!dist/index.html
+node_modules
+styles.css
